@@ -21,3 +21,18 @@ A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.
     ```
 
 4.  Abre [http://localhost:8080](http://localhost:8080) en tu navegador.
+
+## Despliegue en Vercel
+
+Para desplegar esta aplicación en Vercel:
+
+1.  Instala Vercel CLI (opcional, o usa la interfaz web):
+    ```bash
+    npm i -g vercel
+    ```
+2.  Ejecuta el comando de despliegue:
+    ```bash
+    vercel
+    ```
+3.  Sigue las instrucciones en pantalla.
+4.  **Importante**: En el panel de control de Vercel, asegúrate de configurar la variable de entorno `APP_ID` con tu ID de Worldcoin.
