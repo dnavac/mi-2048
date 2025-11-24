@@ -7,10 +7,16 @@
     "build:css": "sass style/main.scss style/main.css --no-source-map --style=compressed",
     "watch:css": "sass --watch style/main.scss:style/main.css --no-source-map",
     "build": "npm run build:css",
-    "start": "npx serve . -l 8080"
+    "start": "node server.js"
   },
   "devDependencies": {
     "sass": "^1.79.0",
     "serve": "^14.2.3"
+  },
+  "dependencies": {
+    "@worldcoin/minikit-js": "^1.9.6",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
   }
 }

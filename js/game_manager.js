@@ -128,10 +128,18 @@ GameManager.prototype.moveTile = function (tile, cell) {
 
 // Move tiles on the grid in the specified direction
 GameManager.prototype.move = function (direction) {
+  if (this.isGameTerminated()) return; // Don't do anything if the game's over
+
+  var self = this;
+  window.worldIDManager.verifyFirstMove(function() {
+    self.doMove(direction);
+  });
+};
+
+// Actual move logic
+GameManager.prototype.doMove = function (direction) {
   // 0: up, 1: right, 2: down, 3: left
   var self = this;
-
-  if (this.isGameTerminated()) return; // Don't do anything if the game's over
 
   var cell, tile;
 
